@@ -57,13 +57,14 @@ locals {
   # Zasoby wspólne (lab 2) -- do odczytu przez bloki data w kolejnych labach. Liczone
   # lokalnie: backend.tf odwołuje się do common.st_tfs przed `tofu init`.
   common = {
-    kv      = "kv-main${local.yy}-${local.sid}"
-    st_tfs  = "sttfstate${local.yy}${local.sid}"
-    vnet    = "vnet-common-${local.yy}"
-    cr      = "crcommon${local.yy}${local.sid}"
-    id_pull = "id-acrpull-${local.yy}"
-    gallery = "gal_labs_${local.yy}" # snake_case: galeria nie dopuszcza '-'
-    log     = "log-common-${local.yy}"
+    kv         = "kv-main${local.yy}-${local.sid}"
+    st_tfs     = "sttfstate${local.yy}${local.sid}"
+    vnet       = "vnet-common-${local.yy}"
+    cr         = "crcommon${local.yy}${local.sid}"
+    id_pull    = "id-acrpull-${local.yy}"
+    gallery    = "gal_labs_${local.yy}" # snake_case: galeria nie dopuszcza '-'
+    log        = "log-common-${local.yy}"
+    image_base = "img-lab007-base"
   }
 }
 
